@@ -1,9 +1,9 @@
-import MessageList from './components/MessageList';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
     <div className="App">
-      <MessageList/>
+      <TodoList/>
     </div>
   );
 }

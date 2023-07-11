@@ -21,7 +21,13 @@ export default function MessageList() {
     setTodoList(updatedTodos)
   }
   function toggleCompleted(id){
-    alert("toggletodo alert "+id)
+    console.log("toggletodo alert "+id)
+    const updatedTodos=todoList.map((todo)=>{
+      if(todo.id===id)
+        return {...todo,completed:!todo.completed}
+      return todo;
+    })
+    setTodoList(updatedTodos)
   }
   return (
     <div>
