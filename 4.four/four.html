@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div id="graph-container" style="width:70vw;height:50vh">
+    </div>
+    <script>
+        //let apikey="2e7aaafe0adff930667ae5eced67770e";
+		var city_name="Vijayawada";
+        const apiKey = "2e7aaafe0adff930667ae5eced67770e";
+const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city_name}&cnt=40&appid=${apiKey}&units=metric`;
+
+fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        console.log("data",data,data.list)
+        const weatherData = data.list.map(item => {
+            console.log(item)
+            return {
+                timestamp: new Date(item.dt*1000).toLocaleDateString('en-US'), // Convert timestamp to milliseconds
+                temperature: item.main.temp
+            };
+        });
+        let finalWeatherData=[]
+        for(i=0;i<40;i=i+4){
+            console.log(weatherData[i])
+            finalWeatherData.push(weatherData[i])
+        }
+        console.log(finalWeatherData)
+        // Call the function to generate the graph
+        generateGraph(finalWeatherData);
+    })
+    .catch(error => {
+        console.log("Error fetching weather data:", error);
+    });
+
+// Fetch weather data from OpenWeatherMap
+
+    function generateGraph(weatherData) {
+    // Create an array of timestamps and temperatures for the graph
+    const timestamps = weatherData.map(item => item.timestamp);
+    const temperatures = weatherData.map(item => item.temperature);
+    console.log(timestamps)
+    
+    // Use a graphing library like Chart.js to create a graph
+    // Here's a simplified example using Chart.js
+
+    // Get the graph container element
+    const graphContainer = document.getElementById('graph-container');
+
+    // Create a canvas element to render the graph
+    const canvas = document.createElement('canvas');
+    graphContainer.appendChild(canvas);
+
+    // Create the chart using Chart.js
+    const mychart=new Chart(canvas, {
+        type: 'bar',
+        data: {
+            labels: timestamps,
+            datasets: [{
+                label: 'Temperature',
+                data: temperatures,
+                backgroundColor:['red','red','green','green','pink','pink','blue','blue','orange','orange'],
+            }]
+        },
+        options: {
+            y: {
+                beginAtZero:true,
+                min:23,
+            }
+        }
+    });
+    
+}
+    </script>
+</body>
+</html>
+
+<!--
+
+<div id="graph-container">
+        <div class="chart">
+            <canvas id="bar" width="300" height="400"></canvas>
+        </div>
+    </div>
+
+
+    const ctx=document.getElementById("chart").getContext('2d');
+    const chart=new Chart(ctx,{
+        type:"bar",
+        data:{
+            labels:timestamps,
+            datasets:[{
+                label:"temperature",
+                data:temperatures
+            }]
+        },
+        options:{
+            scales:{
+                y:{
+                    beginAtZero:true
+                }
+            }
+        }
+    })
+-->

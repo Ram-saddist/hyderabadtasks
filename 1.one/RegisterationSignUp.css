@@ -1,0 +1,98 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#logo{
+    margin-left: -1.65%!important;
+    margin-top: -1.7%;
+    width:100vw;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url("https://img.freepik.com/premium-photo/male-hand-holding-document-icon-blue-background-document-management-data-system-business-internet-technology-concept-corporate-data-management-system-dms_150455-11480.jpg?w=1060");
+    background-size: cover;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+
+  }
+  #registration-form{
+    margin-top: 4.5%;
+  }
+  
+  form {
+    
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    padding: 1%;
+    margin: 0 auto;
+    box-shadow: 1px 3px 5px 5px rgba(0,0,0,0.5);
+    border-radius: 2%;
+    border:1px solid white;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-size: bold;
+    color: white;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]
+  {
+   
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 3px black;
+  }
+  #Department {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 3px black;
+  }
+  input, select {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color:rgb(45, 106, 192);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+   
+  }
+  button:hover{
+    background-color: rgb(27, 135, 27);
+  
+  }
+  
+  /* Responsive CSS using media queries */
+  @media only screen and (max-width: 600px) {
+    form {
+      max-width: 100%;
+    }
+  }
+  a{
+    
+    color:white;
+    text-align: center;
+    margin-bottom: 1%;
+  }

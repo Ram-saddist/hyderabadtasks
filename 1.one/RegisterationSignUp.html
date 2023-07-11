@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="RegisterationSignUp.css">
+</head>
+
+<body>
+
+    <form id="registration-form">
+        <h1> Registration </h1>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email">
+
+        <label for="Department">Choose Department</label>
+        <select id="Department">
+            <option value="">Select a Department</option>
+            <option value="USA">1</option>
+            <option value="Canada">2</option>
+            <option value="UK">3</option>
+            <option value="Australia">4</option>
+        </select>
+        <a href="#"> Already have an account Login</a>
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script src="RegisterationSignUp.js"></script>
+</body>
+
+</html>
