@@ -1,0 +1,86 @@
+<!--Catalog-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .navbar{
+      background-color: aqua;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .navbar a{
+      padding: 1%;
+      color:rgb(227, 18, 213);
+      text-decoration: none;
+    }
+    .navbar a:hover{
+      background-color: rgb(69, 66, 66);
+    }
+    .catalog{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 19px;
+      padding: 1%;
+    }
+    .catalog div{
+      padding: 4%;
+      box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.7);
+    }
+    .catalog p{
+      font-size: 0.7rem;
+    }
+    .catalog img{
+      width:10vw
+    }
+    .catalog .btn{
+      background-color: bisque;
+      border:none;
+      padding:3% 5%
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="registeration.html">Registration</a>
+        <a href="login.html">Login</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+  <section>
+    <h2>Catalog</h2>
+    <div class="catalog">
+      <div>
+        <img  src="https://www.digitaltrends.com/wp-content/uploads/2022/08/iPhone-SE-2022-Starlight-Back-in-Hand.jpg?p=1" alt="iphone"/>
+        <h2>iphone 12 pro max</h2>
+        <p>Best iPhone overall: iPhone 14 Pro and iPhone 14 Pro Max - See at Amazon.Best iPhone overall: iPhone 14 Pro and iPhone 14 Pro Max - See at Amazon.</p>
+        <p>&#8377; 13,999</p>
+        <button class="btn">Add to cart</button>
+      </div>
+      <div>
+        <img  src="https://www.digitaltrends.com/wp-content/uploads/2022/08/iPhone-SE-2022-Starlight-Back-in-Hand.jpg?p=1" alt="iphone"/>
+        <h2>iphone 12 pro max</h2>
+        <p>Best iPhone overall: iPhone 14 Pro and iPhone 14 Pro Max - See at Amazon.Best iPhone overall: iPhone 14 Pro and iPhone 14 Pro Max - See at Amazon.</p>
+        <p>&#8377; 13,999</p>
+        <button class="btn">Add to cart</button>
+      </div>
+      <div>
+        <img  src="https://www.digitaltrends.com/wp-content/uploads/2022/08/iPhone-SE-2022-Starlight-Back-in-Hand.jpg?p=1" alt="iphone"/>
+        <h2>iphone 12 pro max</h2>
+        <p>Best iPhone overall: iPhone 14 Pro and iPhone 14 Pro Max - See at Amazon.Best iPhone overall: iPhone 14 Pro and iPhone 14 Pro Max - See at Amazon.</p>
+        <p>&#8377; 13,999</p>
+        <button class="btn">Add to cart</button>
+      </div>
+      <div>
+        <img  src="https://www.digitaltrends.com/wp-content/uploads/2022/08/iPhone-SE-2022-Starlight-Back-in-Hand.jpg?p=1" alt="iphone"/>
+        <h2>iphone 12 pro max</h2>
+        <p>Best iPhone overall: iPhone 14 Pro and iPhone 14 Pro Max - See at Amazon.Best iPhone overall: iPhone 14 Pro and iPhone 14 Pro Max - See at Amazon.</p>
+        <p>&#8377; 13,999</p>
+        <button class="btn">Add to cart</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
